@@ -25,8 +25,6 @@ function Out() {
   }
   return (
     <>
-      <a href="/add">Add</a>
-
       <div className="row">
         <div className="col-md-12">
           <Submit />
