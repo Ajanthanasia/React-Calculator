@@ -7,7 +7,7 @@ function Submit() {
     setCount(count + 1);
   }
   return (
-    <button className="btn btn-success" onClick={Click}>
+    <button className="btn btn-success form-control" onClick={Click}>
       Click {count} times!
     </button>
   );
@@ -17,7 +17,7 @@ function MyButton({ val, onClick }) {
   console.log(val);
   return (
     <div>
-      <button onClick={onClick}>Click here {val} times</button>
+      <button className="btn btn-info form-control" onClick={onClick}>Click here {val} times</button>
     </div>
   );
 }
@@ -31,12 +31,30 @@ function Out() {
     <>
       <div className="row">
         <div className="col-md-12">
-          <Submit />
-          <Submit />
+          <div className="row">
+            <div className="col-md-6 p-2">
+              <Submit />
+            </div>
+            <div className="col-md-6 p-2">
+              <Submit />
+            </div>
+          </div>
         </div>
         <div className="col-md-12">
-          <MyButton val={val} onClick={MyButtonClick} />
-          <MyButton val={val} onClick={MyButtonClick} />
+          <div className="row">
+            <div className="col-md-3 p-2">
+              <MyButton val={val} onClick={MyButtonClick} />
+            </div>
+            <div className="col-md-3 p-2">
+              <MyButton val={val} onClick={MyButtonClick} />
+            </div>
+            <div className="col-md-3 p-2">
+              <MyButton val={val} onClick={MyButtonClick} />
+            </div>
+            <div className="col-md-3 p-2">
+              <MyButton val={val} onClick={MyButtonClick} />
+            </div>
+          </div>
         </div>
       </div>
     </>
