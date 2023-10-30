@@ -6,7 +6,11 @@ function Submit() {
   function Click() {
     setCount(count + 1);
   }
-  return <button onClick={Click}>Click {count} times!</button>;
+  return (
+    <button className="btn btn-success" onClick={Click}>
+      Click {count} times!
+    </button>
+  );
 }
 
 function MyButton({ val, onClick }) {

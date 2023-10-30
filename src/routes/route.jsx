@@ -6,13 +6,15 @@ import NavBarLabel from "./../layout/navbar";
 function Routepath() {
   return (
     <>
-      <NavBarLabel />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Out />}></Route>
-          <Route path="add" element={<Add />}></Route>
-        </Routes>
-      </BrowserRouter>
+      <div className="container">
+        <NavBarLabel />
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Out />}></Route>
+            <Route path="add" element={<Add />}></Route>
+          </Routes>
+        </BrowserRouter>
+      </div>
     </>
   );
 }
